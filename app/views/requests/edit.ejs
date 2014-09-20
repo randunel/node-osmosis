@@ -1,0 +1,18 @@
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="<%- pathTo.requests() %>">requests</a> <span class="divider">/</span></li>
+    <li class="active"><a href="#">Edit request</a></li>
+</ul>
+
+<div class="page-header">
+    <h1>Edit request</h1>
+</div>
+
+<% var form = formFor(request, {action: pathTo.request(request), method: 'PUT', id: "request-form", class: 'form-horizontal'}) %>
+<%- form.begin() %>
+<%- include _form %>
+<div class="form-actions">
+    <%- form.submit('<i class="icon-ok icon-white"></i> Update request', {class: 'btn btn-primary'}) %> or
+    <%- linkTo('Cancel', pathTo.request(request), {class: 'btn'}) %>
+</div>
+<%- form.end() %>

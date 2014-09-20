@@ -1,0 +1,22 @@
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="<%- pathTo.requests %>">requests</a> <span class="divider">/</span></li>
+    <li class="active"><a href="#">Details of request</a></li>
+</ul>
+
+<div class="page-header">
+    <h1>Details of request</h1>
+</div>
+
+<table class="table table-bordered">
+    <tbody>
+        
+    </tbody>
+</table>
+
+<div class="well">
+    <%- link_to('<i class="icon-edit icon-white"></i> Edit', pathTo.edit_request(request), {class: 'btn btn-primary'}) %>
+    <%- link_to('<i class="icon-remove icon-white"></i> Delete', pathTo.request(request), {class: 'btn btn-danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'}) %>
+    or
+    <%- link_to('Back to index', pathTo.requests) %>
+</div>

@@ -1,2 +1,1 @@
-node-osmosis
-============
+### Welcome to CompoundJS ###
