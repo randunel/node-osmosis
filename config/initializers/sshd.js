@@ -67,7 +67,6 @@ module.exports = function(compound) {
                     config.set('TCPKeepAlive', 'yes');
                     config.set('UsePrivilegeSeparation', 'sandbox');
                     config.set('X11Forwarding', 'no');
-                    config.set('LogLevel', 'DEBUG3');
 
                     config.set('StrictModes', 'no');
                     config.save(function(err) {
