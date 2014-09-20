@@ -22,7 +22,13 @@ module.exports = function(compound, User) {
     };
 
     User.afterCreate = function afterCreate(next) {
-        compound.sshd.addUser(this, next);
+        var user = this;
+        compound.sshd.addUser(user, function(err) {
+            if (err) {
+                return next(err);
+            }
+            compound.proxy.addUser(user, next);
+        });
     };
 
     User.findOrCreateByKey = function findOrCreateByKey(key, cb) {
@@ -53,7 +59,7 @@ module.exports = function(compound, User) {
         for (var i = 0; i < numLetters; i += 1) {
             domain += letters.charAt(Math.floor(Math.random() * letters.length));
         }
-        domain += User.globalCounter += 1;
+        domain += ++User.globalCounter + '.' + compound.app.get('tld');
         return domain;
     };
 

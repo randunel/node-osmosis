@@ -10,5 +10,7 @@ module.exports = function (compound) {
         app.enable('force assets compilation');
         app.set('translationMissing', 'display');
         app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+
+        app.set('tld', 'local.ub.io');
     });
 };

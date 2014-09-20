@@ -14,7 +14,7 @@ var app = module.exports = function getServerInstance(params) {
 };
 
 if (!module.parent || module.parent.isApplicationLoader) {
-    var port = process.env.PORT || 8000;
+    var port = process.env.PORT || 80;
     var host = process.env.HOST || '0.0.0.0';
 
     var server = app();

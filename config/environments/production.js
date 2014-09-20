@@ -9,5 +9,7 @@ module.exports = function (compound) {
         app.enable('merge stylesheets');
         app.disable('assets timestamps');
         app.use(express.errorHandler());
+
+        app.set('tld', 'osmosis.mene.ro');
     });
 };

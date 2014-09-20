@@ -122,7 +122,7 @@ module.exports = function(compound) {
         },
         getAuthorizedKey: function getAuthorizedKey(key, port) {
             return '' +
-            'command="echo You may only use port forwarding",' +
+            'command="echo You may only use this with osmosis",' +
             'no-agent-forwarding,' +
             'no-X11-forwarding,' +
             'permitopen="localhost:' + port + '" ' +

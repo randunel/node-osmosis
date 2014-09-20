@@ -26,7 +26,7 @@ UserController.prototype.create = function create(c) {
         }
         c.send({
             result: 'success',
-            url: 'http://' + user.domain + '.osmosis.mene.ro',
+            url: 'http://' + user.domain,
             port: user.port
         });
     });

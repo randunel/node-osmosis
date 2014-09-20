@@ -1,5 +1,6 @@
-module.exports = function (compound) {
+'use strict';
 
+module.exports = function (compound) {
     var express = require('express');
     var app = compound.app;
 
@@ -19,5 +20,5 @@ module.exports = function (compound) {
         app.set('sshd_port', 44044);
         app.set('sshd_encryptions', ['rsa', 'dsa', 'ecdsa', 'ed25519']);
     });
-
 };
+

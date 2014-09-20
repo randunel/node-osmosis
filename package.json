@@ -13,7 +13,9 @@
         "stylus": "latest",
         "seedjs": "latest",
         "co-assets-compiler": "*",
-        "async": "0.9.0"
+        "async": "0.9.0",
+        "http-proxy": "1.4.x",
+        "body": "4.5.x"
     }, "devDependencies": {
         "nodeunit": "*",
         "sinon": "*",

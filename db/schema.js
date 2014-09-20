@@ -22,8 +22,10 @@
 */
 
 var Request = describe('Request', function () {
-    property('domain', String, {index: true});
+    property('subdomain', String, {index: true});
     property('createdAt', Date, {default: function() { return new Date() }});
+    property('req', function JSON() {});
+    property('res', function JSON() {});
     set('restPath', pathTo.requests);
 });
 
